@@ -47,10 +47,12 @@ docker compose build
 docker compose up
 ```
 ### 3. **Access the App**
-1. WebApp: http://localhost:8080
+1. WebApp: http://localhost:8080/src/login.php (Poor development decisions I know)
 2. phpMyAdmin: http://localhost:8081
    User: user
    Password: password
+3. Import buy_now_db.sql to the database
+4. 
 
 This project is intentionally vulnerable and should be used for educational purposes only. DO NOT deploy it on public servers.
 Feel free to use, modify and throw it around the internet.
