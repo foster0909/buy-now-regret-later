@@ -2,35 +2,37 @@
 
 This is a custom (and poorly) built vulnerable PHP + MySQL application designed to practice Web application security, testing and exploitation.
 ---
-## 🧠 Features & Vulnerabilities
+## 🧩 Features
+- 👤 **User Accounts**
+  - Register and log in as a user
+  - Edit profile, bio, and email
+  - Reset password and OTP system
 
-- 🔐 **Authentication & Sessions**
-  - Weak session management
-  - Cookie-based manipulation
-  - Role-based access bypass
+- 🛒 **Shopping System**
+  - Add products to cart
+  - View cart and subtotal
+  - Purchase items using virtual balance
 
-- 🛒 **Cart & Purchase System**
-  - Hidden fields for price manipulation
-  - Insufficient authorization on purchase
-  - Logic flaws in calculations
+- ✍️ **Product Reviews**
+  - Users can leave reviews on products
+  - View all feedback for each item
 
-- 🧨 **Stored XSS & DOM XSS**
-  - Inject JavaScript via product reviews
-  - Trigger external beacon requests
+- 🖼️ **Profile Pictures**
+  - Upload and change profile images
 
-- 🕵️ **SQL Injection (Blind & Error-Based)**
-  - Blind SQLi on login and review endpoints
-  - Extract admin hashes with timing attacks
+- 🛠️ **Admin Panel**
+  - Manage all products and users
+  - View submitted reviews
 
-- 🪝 **Broken Access Control**
-  - Edit/delete reviews of other users
-  - View cart of a user named Mike
-  - Change email of other users
+- 📊 **Bank & Balance Tracking**
+  - Virtual bank system
+  - Track total items purchased
 
-- 🕹️ **Flags & Challenges**
-  - Trigger flags by purchasing “suspicious items”
-  - Hidden cookies / header manipulation
-  - Explore `admin_dashboard.php` to find the final flag
+- 🌐 **REST-style API Endpoints**
+  - JSON responses for product reviews
+  - AJAX-based review submission and removal
+
+---
 
 ---
 
@@ -52,7 +54,7 @@ docker compose up
    User: user
    Password: password
 3. Import buy_now_db.sql to the database
-4. 
+
 
 This project is intentionally vulnerable and should be used for educational purposes only. DO NOT deploy it on public servers.
 Feel free to use, modify and throw it around the internet.
