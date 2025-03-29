@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /login.php
+Disallow: /register.php
+Disallow: /user_dashboard.php
+Disallow: /admin_dashboard.php
+Disallow: /
+Disallow: /hidden_admin_panel.php
+Disallow: /cart.php
+Disallow: /super_secret.zip

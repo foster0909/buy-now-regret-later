@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+html, body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #232f3e, #37475a);
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, #232f3e, #37475a);
+    color: white;
+}
+
+/* Hide Scrollbars */
+.container {
+    max-width: 400px;
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    overflow-y: auto;
+    scrollbar-width: none; /* Firefox */
+}
+
+/* Hide Scrollbars for Chrome & Edge */
+.container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Style Buttons to Match UI */
+button, .side-btn, .logout-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: linear-gradient(90deg, #ff9900, #ff6600);
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover, .side-btn:hover, .logout-btn:hover {
+    background: linear-gradient(90deg, #ff6600, #cc5500);
+    transform: scale(1.05);
+}
+
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 380px;
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.03);
+}
+
+/* Input fields */
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 95%;
+    padding: 12px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+input::placeholder {
+    color: white;
+    opacity: 0.7;
+}
+
+/* Hover effect on inputs */
+input[type="text"]:hover, 
+input[type="email"]:hover, 
+input[type="password"]:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.02);
+}
+
+/* Submit button */
+input[type="submit"] {
+    background: linear-gradient(90deg, #ff9900, #ff6600);
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    font-weight: 600;
+}
+
+/* Hover effect on Submit button */
+input[type="submit"]:hover {
+    background: linear-gradient(90deg, #ff6600, #cc5500);
+    transform: scale(1.05);
+}
+
+/* Secondary buttons (Back, Forgot Password, etc.) */
+.secondary-btn {
+    margin-top: 10px;
+    padding: 12px 20px;
+    border: none;
+    background: linear-gradient(90deg, #37475a, #232f3e);
+    color: white;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    font-weight: 600;
+    width: 100%;
+}
+
+/* Hover effect on Secondary buttons */
+.secondary-btn:hover {
+    background: linear-gradient(90deg, #232f3e, #1a242f);
+    transform: scale(1.05);
+}
+
+/* Error message */
+.error {
+    color: #ff4f4f;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.container form {
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 12px;
+    text-align: left;
+}
+
+.container form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.container form input[type="text"],
+.container form textarea {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    transition: background 0.3s ease;
+}
+
+.container form textarea {
+    resize: none;
+    height: 60px;
+}
+
+.container form input[type="submit"] {
+    background: linear-gradient(90deg, #ff9900, #ff6600);
+    cursor: pointer;
+    font-weight: 600;
+    padding: 12px;
+    border-radius: 8px;
+    width: 100%;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.container form input[type="submit"]:hover {
+    background: linear-gradient(90deg, #ff6600, #cc5500);
+    transform: scale(1.05);
+}
+.edit-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #ff9900;
+    margin-left: 10px;
+    transition: transform 0.2s ease;
+}
+
+.edit-btn:hover {
+    transform: scale(1.2);
+}
+
+input[readonly], textarea[readonly] {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    cursor: not-allowed;
+}
+
+input:not([readonly]):focus, textarea:not([readonly]):focus {
+    background: rgba(255, 255, 255, 0.3);
+    cursor: text;
+}
+
+.profile-pic-container {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Style for Upload Button in Profile Picture Section */
+.pfp-upload-container input[type="submit"],
+.pfp-upload-container button {
+    background: linear-gradient(90deg, #ff9900, #ff6600);
+    color: white;
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.2s ease;
+    width: 100%;
+}
+
+.pfp-upload-container input[type="submit"]:hover,
+.pfp-upload-container button:hover {
+    background: linear-gradient(90deg, #ff6600, #cc5500);
+    transform: scale(1.05);
+}
+
+/* Fix Logout Button */
+.logout-btn {
+    background: linear-gradient(90deg, #ff4f4f, #cc0000);
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    width: 100%;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.logout-btn:hover {
+    background: linear-gradient(90deg, #cc0000, #990000);
+    transform: scale(1.05);
+}
+
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1);
+}
+
+.change-pfp-btn {
+    background: linear-gradient(90deg, #ff9900, #ff6600);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.change-pfp-btn:hover {
+    background: linear-gradient(90deg, #ff6600, #cc5500);
+    transform: scale(1.05);
+}
+
+.pfp-upload-container {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.4);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.pfp-upload-container h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.pfp-upload-container input[type="file"] {
+    width: 80%;
+    padding: 12px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    margin-bottom: 10px;
+}
+
+.pfp-upload-container input[type="submit"] {
+    background: linear-gradient(90deg, #ff9900, #ff6600);
+    cursor: pointer;
+    font-weight: 600;
+    padding: 12px;
+    border-radius: 8px;
+    width: 100%;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.pfp-upload-container input[type="submit"]:hover {
+    background: linear-gradient(90deg, #ff6600, #cc5500);
+    transform: scale(1.05);
+}
+
+.cancel-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+.cancel-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
